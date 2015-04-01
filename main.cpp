@@ -72,7 +72,7 @@ int main()
 {
     srand(time(0));
 
-    ifstream ifile("PFSP_benchmark_data_set/tai20_5_1.txt");
+    ifstream ifile("PFSP_benchmark_data_set/tai100_20_1.txt");
     ofstream ofile("output.txt");
 
     int n_jobs, n_mechs, counter = 1, times = 20;
