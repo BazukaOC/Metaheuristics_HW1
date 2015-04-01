@@ -37,7 +37,7 @@ vector< vector<int> >& iiTestSwap(const int n_mechs, const int njobA, const int 
         swap(myVector[i][njobA], myVector[i][njobB]);
     }
     return myVector;
-}
+} /// need to fix
 
 vector< vector<int> >& iiSwap(const int n_mechs, const int njobA, const int njobB, vector< vector<int> >& myVector) {
     for(int i = 0; i < n_mechs; ++i) {
@@ -90,8 +90,8 @@ int main()
     while(counter <= times) {
         int a = rand() % n_jobs, b = ( a + ( rand() % (n_jobs - 1) + 1 ) ) % n_jobs;
         myVector = iiSwap(n_mechs, a, b, myVector);
-        cout << counter << " times" << endl;
-        cout << "Swap: (" << a << ", " << b << "). Min MakeSpan: " << iterativeImprovement(n_mechs, n_jobs, myVector) << endl;
+        ofile << counter << " times" << endl;
+        ofile << "Swap: (" << a << ", " << b << "). Min MakeSpan: " << iterativeImprovement(n_mechs, n_jobs, myVector) << endl;
         counter++;
     }
 
